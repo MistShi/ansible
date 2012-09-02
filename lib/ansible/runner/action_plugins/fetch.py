@@ -32,7 +32,7 @@ class ActionModule(object):
     def __init__(self, runner):
         self.runner = runner
 
-    def run(self, conn, tmp, inject=None):
+    def run(self, conn, tmp, module_name, inject):
         ''' handler for fetch operations '''
 
         # load up options

@@ -32,8 +32,8 @@ class ActionModule(object):
     def __init__(self, runner):
         self.runner = runner
 
-    def run(self, conn, tmp, inject=None):
-       ''' handler for file transfer operations '''
+    def run(self, conn, tmp, module_name, inject):
+        ''' handler for file transfer operations '''
 
         # load up options
         options = utils.parse_kv(self.runner.module_args)

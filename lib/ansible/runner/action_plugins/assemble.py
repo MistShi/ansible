@@ -32,7 +32,7 @@ class ActionModule(object):
     def __init__(self, runner):
         self.runner = runner
 
-    def run(self, conn, tmp, inject=None):
+    def run(self, conn, tmp, module_name, inject=None):
         ''' handler for assemble operations '''
 
         # FIXME: since assemble is ported over to the use the new common logic, this method

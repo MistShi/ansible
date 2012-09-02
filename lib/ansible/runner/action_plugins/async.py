@@ -32,10 +32,7 @@ class ActionModule(object):
     def __init__(self, runner):
         self.runner = runner
 
-    def run(self, conn, tmp, inject=None):
-        ''' handler for fetch operations '''
-
-    def _execute_async_module(self, conn, tmp, module_name, inject=None):
+    def run(self, conn, tmp, module_name, inject):
         ''' transfer the given module name, plus the async module, then run it '''
 
         # shell and command module are the same

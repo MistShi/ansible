@@ -32,7 +32,7 @@ class ActionModule(object):
     def __init__(self, runner):
         self.runner = runner
 
-    def run(self, conn, tmp, inject=None):
+    def run(self, conn, tmp, module_name, inject):
         return ReturnData(conn=conn, result=dict(
             stdout=self.runner._low_level_exec_command(conn, self.runner.module_args.encode('utf-8'), tmp, sudoable=True)
         ))

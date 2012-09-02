@@ -26,13 +26,14 @@ from ansible import utils
 from ansible import errors
 from ansible import module_common
 from ansible.runner.return_data import ReturnData
+from ansible.callbacks import vv, vvv
 
 class ActionModule(object):
 
     def __init__(self, runner):
         self.runner = runner
 
-    def run(self, conn, tmp, inject=None):
+    def run(self, conn, tmp, module_name, inject):
         ''' transfer & execute a module that is not 'copy' or 'template' '''
 
         # shell and command are the same module
