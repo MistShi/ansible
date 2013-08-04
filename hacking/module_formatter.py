@@ -325,6 +325,9 @@ def main():
         modules.sort()
 
         for module in modules:
+
+            print "RENDERING: %s" % module
+
             fname = module_map[module]
 
             if len(options.module_list):
